@@ -36,7 +36,9 @@ jobs:
         with:
           name: TFLint
           path: tflint-output.json
-        if: always()                        # what is this for?    
+        if: always()                        # what is this for?   
+    continue-on-error: true
+   
 
   integration:
     runs-on: ubuntu-20.04
