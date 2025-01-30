@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   AWS-scan:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/IaC-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
     with:
       language: terraform
       project_dir: ./
