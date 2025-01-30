@@ -1,0 +1,24 @@
+name: Terraform                               # workflow name
+
+######## IMPORTANT ########
+# non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error-code that is not "0" !!!
+# Set environment as:
+# environment: non-prod
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  AWS-scan:
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/IaC-workflow.yml@main
+    with:
+      language: python
+      project_dir: ./
+      # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
+      environment: non-prod
