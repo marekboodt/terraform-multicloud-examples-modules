@@ -1,6 +1,6 @@
 name: Terraform                               # workflow name
 
-######## IMPORTANT ########
+######## IMPORTANT ######## 
 # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error-code that is not "0" !!!
 # Set environment as:
 # environment: non-prod  
