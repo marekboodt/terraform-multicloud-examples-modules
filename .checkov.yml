@@ -1,3 +1,3 @@
-# Testing to "accept" risks / vulnerabilities 
+# Testing to "accept" risks / vulnerabilities
 skip-check:
   - CKV_AWS_23  # Reason: This S3 bucket doesn't need versioning due to data retention policy
