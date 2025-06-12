@@ -8,7 +8,7 @@ This repository contains the **Infrastructure as Code (IaC)** definitions writte
 
 This repository is integrated with automated security scanning using [Checkov](https://www.checkov.io), executed via GitHub Actions every time code is pushed to the `main` branch.
 
-The purpose is to catch and prevent misconfigurations in Terraform code that could lead to insecure infrastructure deployments.
+The purpose is to catch and prevent misconfigurations in Terraform code that could lead to insecure infrastructure deployments. 
 
 ---
 
