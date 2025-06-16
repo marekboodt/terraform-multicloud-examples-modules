@@ -12,7 +12,7 @@ The purpose is to catch and prevent misconfigurations in Terraform code that cou
 
 ---
 
-## ✅ What Is Checked
+## ✅ What Is Checked?
 
 Checkov analyzes Terraform code and reports potential risks such as:
 
