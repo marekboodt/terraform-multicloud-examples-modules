@@ -19,7 +19,9 @@ permissions:
 
 jobs:
   IAC-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
+    # uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/copy-of-iac-workflow-copy.yml@main
+    
     with:
       language: terraform
       project_dir: ./
