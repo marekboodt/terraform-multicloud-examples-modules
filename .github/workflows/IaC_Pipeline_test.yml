@@ -1,4 +1,4 @@
-name: Terraform Checkov Scan      # workflow name
+name: Terraform                               # workflow name
 
 ######## IMPORTANT ######## 
 # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error-code that is not "0" !!!
@@ -14,15 +14,11 @@ permissions:
   actions: read
   contents: read
 
-      # Variables to set:
-      # language - Must be set of the code must be set to know which Scanning Type / File will be used
-      # project_dir - Must be set to knw know which Directory to scan, " ./ " will be the default. 
-      # environment - Must be set to know if the pipeline should stop or continue on error - non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
-
 jobs:
   IAC-Workflow:
     uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
     with:
       language: terraform
       project_dir: ./
+      # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
       environment: non-prod
