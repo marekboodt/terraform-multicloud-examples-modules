@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   IAC-Workflow:
-    uses: https://github.com/marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
     with:
       language: terraform
       project_dir: ./
