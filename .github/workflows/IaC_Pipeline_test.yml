@@ -20,7 +20,8 @@ permissions:
 
 jobs:
   IAC-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow2.yml@main
+    # uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-workflow.yml@main
     # uses: marekboodt/Security-Scanning-Repo/.github/workflows/copy-of-iac-workflow-copy.yml@main
     
     with:
