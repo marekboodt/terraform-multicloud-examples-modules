@@ -2,6 +2,7 @@ name: Terraform Checkov Scan           # workflow name
 
 ######## IMPORTANT ######## 
 # Variables to set:
+# type - must be set - what type of scan, [SCA, SAST, DAST, IAC]
 # language - Must be set of the code must be set to know which Scanning Type / File will be used
 # project_dir - Must be set to knw know which Directory to scan, " ./ " will be the default. 
 # environment - Must be set to know if the pipeline should stop or continue on error - non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
@@ -23,6 +24,7 @@ jobs:
     # uses: marekboodt/Security-Scanning-Repo/.github/workflows/copy-of-iac-workflow-copy.yml@main
     
     with:
+      type: iac
       language: terraform
       project_dir: ./
       # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
