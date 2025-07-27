@@ -1,6 +1,8 @@
 name: Terraform Checkov Scan           # workflow name
 
 ######## IMPORTANT ######## 
+# .checkov.yml -> This file contains "Checkov Findings" that you want to skip. Can be seen as a "risk acceptance file"
+
 # Variables to set:
 # type - must be set - what type of scan, [SCA, SAST, DAST, IAC]
 # language - Must be set of the code must be set to know which Scanning Type / File will be used
@@ -35,4 +37,4 @@ jobs:
       language: terraform
       project_dir: ./
       # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
-      environment: non-prod
+      environment: prod
