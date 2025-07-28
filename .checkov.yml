@@ -1,6 +1,6 @@
 # Skip PATH in the Security Scanning Repo - https://github.com/marekboodt/Security-Scanning-Repo 
-#skip-paths:
-#  - .github/workflows/DEV/
+skip-path:
+  - .github/workflows/DEV/
 #  - .github/workflows/OLD/
   
 # Testing to "accept" risks / vulnerabilities
