@@ -1,3 +1,8 @@
+# Skip PATH in the Security Scanning Repo - https://github.com/marekboodt/Security-Scanning-Repo 
+skip-paths:
+  - OLD/
+  - DEV/
+  
 # Testing to "accept" risks / vulnerabilities
 skip-check:
 ## AWS ##
