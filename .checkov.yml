@@ -9,6 +9,7 @@ skip-check:
   - CKV_AWS_23  # Reason: This S3 bucket doesn't need versioning due to data retention policy
   - CKV_AWS_382
   - CKV_AWS_129
+  - CKV2_AWS_61 # Testing with security - SARIF file if deleted. 
 ## AZURE ##
   - CKV_AZURE_141 
 ## GCP ##
