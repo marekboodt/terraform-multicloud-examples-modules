@@ -1,6 +1,6 @@
 name: Terraform Checkov Scan           # workflow name
 
-######## IMPORTANT ######## 
+######## IMPORTANT ######### 
 # .checkov.yml -> This file contains "Checkov Findings" that you want to skip. Can be seen as a "risk acceptance file"
 
 # Variables to set:
