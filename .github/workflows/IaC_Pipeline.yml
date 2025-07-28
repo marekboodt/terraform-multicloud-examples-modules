@@ -39,12 +39,3 @@ jobs:
       project_dir: ./
       # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
       environment: non-prod
-
-  IAC-GH-Actions-Workflow2:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/iac-gh-action-workflow2.yml@main
-    with:
-      type: iac
-      language: terraform
-      project_dir: ./
-      # non-prod has 'continue-on-error: true' all other environments will be stopped if the scans give an error.
-      environment: non-prod
