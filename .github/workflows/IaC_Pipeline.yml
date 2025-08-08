@@ -32,7 +32,7 @@ jobs:
       environment: non-prod
 
   IAC-GH-Actions-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/03-iac-gh-action-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/03-iac-github-action-workflow.yml@main
     with:
       type: iac
       language: terraform
