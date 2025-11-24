@@ -23,7 +23,7 @@ permissions:
 
 jobs:
   IAC-Custom-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/03-iac-custom-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/41-iac-custom-workflow.yml@main
     with:
       language: terraform
       project_dir: ./
@@ -31,7 +31,7 @@ jobs:
       environment: non-prod
 
   IAC-GH-Actions-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/03-iac-github-action-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/40-iac-github-action-workflow.yml@main
     with:
       language: terraform
       project_dir: ./
