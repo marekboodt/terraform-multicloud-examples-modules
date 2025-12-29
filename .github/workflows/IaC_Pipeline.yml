@@ -16,7 +16,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-  - cron: '0 3 * * 3'   # Wednesday at 03:00 UTC
+   - cron: '0 3 * * 3'   # Wednesday at 03:00 UTC
 
 permissions:
   actions: read
