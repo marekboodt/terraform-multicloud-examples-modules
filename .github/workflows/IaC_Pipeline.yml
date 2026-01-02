@@ -18,14 +18,14 @@ permissions:
 
 jobs:
   IAC-GH-Actions-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/40-iac-github-action-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/40-iac-github-action-workflow.yml@v1
     with:
       language: terraform
       project_dir: ./
       environment: non-prod
       
   IAC-Custom-Workflow:
-    uses: marekboodt/Security-Scanning-Repo/.github/workflows/41-iac-custom-workflow.yml@main
+    uses: marekboodt/Security-Scanning-Repo/.github/workflows/41-iac-custom-workflow.yml@v1
     with:
       language: terraform
       project_dir: ./
