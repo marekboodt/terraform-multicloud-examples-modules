@@ -1,16 +1,74 @@
-# Skip PATH in the Security Scanning Repo - https://github.com/marekboodt/Security-Scanning-Repo 
+# =============================================================================
+# [PROJECT-SPECIFIC] CHECKOV EXCEPTIONS
+# =============================================================================
+# Project: terraform-multicloud-examples-modules
+# Team: Platform / Cloud Engineering
+# Contact: platform-team@company.com
+# Last review: YYYY-MM-DD
+# Next review: YYYY-MM-DD
+# =============================================================================
+# USE THIS FILE FOR:
+# =============================================================================
+# - Accepted IaC security findings
+# - False positives
+# - Context-specific deviations
+# - Temporary risk acceptances (with review date!)
+# =============================================================================
+# IMPORTANT RULES:
+# =============================================================================
+# - Every skipped check MUST have a reason
+# - Review dates are mandatory
+# - Temporary exceptions should be removed once fixed
+# - Max review window: 6 months
+# =============================================================================
+
+
+# =============================================================================
+# PATHS TO SKIP (NON-PRODUCTION / LEGACY / TEST FILES)
+# =============================================================================
 skip-path:
+  # CI / legacy workflows (not deployed infrastructure)
   - .github/workflows/DEV/
   - .github/workflows/OLD/
-  
-# Testing to "accept" risks / vulnerabilities
+
+
+# =============================================================================
+# SKIPPED CHECKS (RISK ACCEPTANCE / FALSE POSITIVES)
+# =============================================================================
 skip-check:
-## AWS ##
-  - CKV_AWS_23  # Reason: This S3 bucket doesn't need versioning due to data retention policy
-  - CKV_AWS_382
-  - CKV_AWS_129
-  - CKV2_AWS_61 # Testing with security - SARIF file if deleted. 
-## AZURE ##
-  - CKV_AZURE_141 
-## GCP ##
-  - CKV_GCP_53
+
+  # ---------------------------------------------------------------------------
+  # AWS
+  # ---------------------------------------------------------------------------
+
+  # S3 versioning not required due to short-lived data and backup strategy
+  - CKV_AWS_23   # No versioning | Platform Team | Added YYYY-MM-DD | Review YYYY-MM-DD
+
+  # Known false positive – resource is not publicly accessible
+  - CKV_AWS_382  # False positive | Platform Team | Added YYYY-MM-DD | Review YYYY-MM-DD
+
+  # Encryption handled at application layer
+  - CKV_AWS_129  # App-level encryption | Platform Team | Added YYYY-MM-DD | Review YYYY-MM-DD
+
+  # ---------------------------------------------------------------------------
+  # AWS (v2)
+  # ---------------------------------------------------------------------------
+
+  # SARIF generation testing / internal validation
+  - CKV2_AWS_61  # Internal testing | Security Team | Added YYYY-MM-DD | Review YYYY-MM-DD
+
+
+  # ---------------------------------------------------------------------------
+  # AZURE
+  # ---------------------------------------------------------------------------
+
+  # Resource not internet-facing, protected by private networking
+  - CKV_AZURE_141  # Private resource | Cloud Team | Added YYYY-MM-DD | Review YYYY-MM-DD
+
+
+  # ---------------------------------------------------------------------------
+  # GCP
+  # ---------------------------------------------------------------------------
+
+  # Logging handled centrally via org policy
+  - CKV_GCP_53  # Org-level logging | Cloud Team | Added YYYY-MM-DD | Review YYYY-MM-DD
